@@ -6,7 +6,7 @@
 	<!--  set Port to -1 if no WS port should be opened -->
 	<entry key="Port">8080</entry>
 	<!--  set SSLport to -1 if no WSS port should be opened -->
-	<entry key="SSLport">-1</entry>
+	<entry key="SSLport">8090</entry>
 	<!-- Timeout in ms (default is 5min) -->
 	<entry key="Timeout">300000</entry>
 	<!-- Path to the Keystore where certificates are stored -->

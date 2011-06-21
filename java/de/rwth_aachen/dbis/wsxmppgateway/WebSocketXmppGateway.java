@@ -167,7 +167,7 @@ public class WebSocketXmppGateway extends Server {
 			webSocketPort = Integer.parseInt(prop.getProperty("Port", "-1"));
 			sslWebSocketPort = Integer.parseInt(prop.getProperty("SSLport", "-1"));
 			timeout = Integer.parseInt(prop.getProperty("Timeout", DEFAULT_TIMEOUT + ""));
-			keyStorePath = prop.getProperty("KeyStore");
+			keyStorePath = prop.getProperty("Keystore");
 			keyStorePassword = prop.getProperty("KeystorePassword");
 			docRoot = prop.getProperty("DocRoot", DEFAULT_DOC_ROOT);
 			listDirectories = "true".equals(prop.getProperty("DirectoryListing", DEFAULT_LIST_DIRECTORIES + "").toLowerCase());
