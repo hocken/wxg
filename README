@@ -63,9 +63,9 @@ Perform the following steps to run WXG:
 	
 References
 ==========
-[1]	P. Saint-Andre. Extensible Messaging and Presence Protocol (XMPP): Core. RFC3920. Oct 2004. http://www.ietf.org/rfc/rfc3920.txt
-[2]	I. Fette.  The WebSocket protocol. HyBi Working Group Internet Draft. Jun 2011. http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-09
-[3]	I. Hickson. The WebSocket API. W3C Editor's draft. Jun 2011. http://dev.w3.org/html5/websockets/
-[4]	J. Moffit, E. Cestari. An XMPP Sub-protocol for WebSocket. HyBi Working Group Internet Draft. Dec 2010. http://tools.ietf.org/html/draft-moffitt-xmpp-over-websocket-00
+[1] P. Saint-Andre. Extensible Messaging and Presence Protocol (XMPP): Core. RFC3920. Oct 2004. http://www.ietf.org/rfc/rfc3920.txt
+[2] I. Fette.  The WebSocket protocol. HyBi Working Group Internet Draft. Jun 2011. http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-09
+[3] I. Hickson. The WebSocket API. W3C Editor's draft. Jun 2011. http://dev.w3.org/html5/websockets/
+[4] J. Moffit, E. Cestari. An XMPP Sub-protocol for WebSocket. HyBi Working Group Internet Draft. Dec 2010. http://tools.ietf.org/html/draft-moffitt-xmpp-over-websocket-00
 [5] I. Paterson, D. Smith, P. Saint-Andre, J. Moffitt. XEP-0124: Bidirectional-streams Over Synchronous HTTP (BOSH). XSF Draft Standard. Jul 2010. 
-[6]	I. Paterson, P. Saint-Andre. XEP-0206: XMPP Over BOSH. XSF Draft Standard. Jul 2010. http://xmpp.org/extensions/xep-0206.html
+[6] I. Paterson, P. Saint-Andre. XEP-0206: XMPP Over BOSH. XSF Draft Standard. Jul 2010. http://xmpp.org/extensions/xep-0206.html
