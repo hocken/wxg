@@ -76,19 +76,23 @@ Perform the following steps to run WXG:
 Access WXG from client-side
 ==========================
 
-Open a new WebSocket and point it to ws://${YOUR_HOSTNAME}:${PORT}
-where ${YOUR_HOSTNAME} is the ip or the hostname of the interface  WXG is bound to
-and ${PORT} is the port specified in conf/server.xml. WXG waits until the opening stream tag
-arrives and then reads the "to" attribute. Three options are available to define the
-hostname of the XMPP server to which the stream should be forwared:
-1.) Pass the desired hostname and server in the WebSocket URL
-    Example: ws://localhost:8080/?xmpphost=jabber.com&xmppport=5222
-2.) Use the aliases db in conf/aliases.conf to rewrite the hostname set in the "to"
-    attribute of the opening stream tag
-3.) Use the hostname set in the "to" attribute of the opening stream tag
+Open a new WebSocket and point it to ws://${WXG_HOSTNAME}:${WXG_PORT} where ${WXG_HOSTNAME} is the IP address
+or the hostname of the interface WXG is bound to and ${WXG_PORT} is the port specified in conf/server.xml. 
+WXG waits until the opening stream tag arrives and then reads the "to" attribute. Three options are available
+to define the hostname of the XMPP server to which the stream should be forwared:
+
+1) Pass the desired hostname and server in the WebSocket URL
+   Example: ws://localhost:8080/?xmpphost=jabber.com&xmppport=5222
+
+2) Use the aliases db in conf/aliases.conf to rewrite the hostname set in the "to"
+   attribute of the opening stream tag
+
+3) Use the hostname set in the "to" attribute of the opening stream tag
+
 The options are applied in the given order.
-A simple testbed is available in www/testbed.html.It can be accessed by pointing the browser
-to http://localhost:8080/testbed.html 
+
+A simple testbed is available in ${WXG_HOME}/www/testbed.html. It can be accessed by pointing the browser
+to http://${WXG_HOSTNAME}:${WXG_PORT}/testbed.html (standard config: http://localhost:8080/testbed.html) 
 
 References
 ==========
@@ -96,5 +100,5 @@ References
 [2] I. Fette.  The WebSocket protocol. HyBi Working Group Internet Draft. Jun 2011. http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-09
 [3] I. Hickson. The WebSocket API. W3C Editor's draft. Jun 2011. http://dev.w3.org/html5/websockets/
 [4] J. Moffit, E. Cestari. An XMPP Sub-protocol for WebSocket. HyBi Working Group Internet Draft. Dec 2010. http://tools.ietf.org/html/draft-moffitt-xmpp-over-websocket-00
-[5] I. Paterson, D. Smith, P. Saint-Andre, J. Moffitt. XEP-0124: Bidirectional-streams Over Synchronous HTTP (BOSH). XSF Draft Standard. Jul 2010. 
+[5] I. Paterson, D. Smith, P. Saint-Andre, J. Moffitt. XEP-0124: Bidirectional-streams Over Synchronous HTTP (BOSH). XSF Draft Standard. Jul 2010. http://xmpp.org/extensions/xep-0124.html
 [6] I. Paterson, P. Saint-Andre. XEP-0206: XMPP Over BOSH. XSF Draft Standard. Jul 2010. http://xmpp.org/extensions/xep-0206.html
