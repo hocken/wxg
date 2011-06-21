@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="WebSocket XMPP Gateway" basedir="." default="pack">
+	<description>
+		This build file compiles and packs the WebSocket XMPP Gateway developed at the 
+		chair of Information Systems at RWTH Aachen University, Germany.
+	</description>
+	
+	<property name="src" location="java" />
+	<property name="lib" location="lib" />
+	<property name="conf" location="conf" />
+	<property name="doc" location="javadoc" />
+	<property name="tmp" location="temp" />
+	<property name="tmp.classes" location="${tmp}/classes" />
+	
+	<path id="classpath">
+		<fileset dir="${lib}" >
+			<include name="*.jar"/>
+		</fileset>
+		<pathelement location="${conf}"/>
+	</path>
+	
+	<target name="init" description="creates the temp folder">
+		<tstamp/>
+		<mkdir dir="${tmp}" />
+		<mkdir dir="${tmp.classes}" />
+	</target>
+	
+	<target name="compile" depends="init" description="compiles the source code">
+		<javac destdir="${tmp.classes}" debug="on">
+			<src path="${src}" />
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+	
+	<target name="pack" depends="compile" description="creates an executable jar file">
+		<manifestclasspath property="jar.classpath" jarfile="wsxmppgateway.jar">
+			<classpath refid="classpath"/>
+		</manifestclasspath> 
+		<jar jarfile="wsxmppgateway.jar">
+			<manifest>
+				<attribute name="Main-Class" value="de.rwth_aachen.dbis.wsxmppgateway.WebSocketXmppGateway" />
+				<attribute name="Class-Path" value="${jar.classpath}" />
+			</manifest>
+			<fileset dir="${tmp.classes}">
+				<include name="de/rwth_aachen/dbis/wsxmppgateway/**/*.class" />
+			</fileset>
+		</jar>
+	</target>
+	
+	<target name="doc" depends="init" description="generates javadoc API documentation">
+		<mkdir dir="${doc}"/>
+		<javadoc destdir="${doc}"
+                 author="true"
+                 version="true"
+                 use="true"
+                 link="http://download.oracle.com/javase/6/docs/api/"
+                 classpathref="classpath"
+                 windowtitle="WebSocket XMPP Gateway">
+			<packageset dir="${src}">
+				<include name="de/rwth_aachen/dbis/wsxmppgateway/**" />
+			</packageset>
+			<bottom>
+				<![CDATA[<p class="bottom">Copyright &#169; 2011 Chair of Information Systems at RWTH Aachen University, Germany</p>]]>
+			</bottom>
+		</javadoc>
+	</target>
+</project>

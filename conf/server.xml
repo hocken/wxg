@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- Hostname of the interface to bind to, bind all interfaces if empty -->
+	<entry key="Host"></entry>
+	<!--  set Port to -1 if no WS port should be opened -->
+	<entry key="Port">8080</entry>
+	<!--  set SSLport to -1 if no WSS port should be opened -->
+	<entry key="SSLport">-1</entry>
+	<!-- Timeout in ms (default is 5min) -->
+	<entry key="Timeout">300000</entry>
+	<!-- Path to the Keystore where certificates are stored -->
+	<entry key="Keystore">conf/keystore.jks/</entry>
+	<!-- Password of the Keystore defined above -->
+	<entry key="KeystorePassword">123456</entry>
+	<!-- Document root (default is www) -->
+	<entry key="DocRoot">www</entry>
+	<!-- enable directory listing (default is false) -->
+	<entry key="DirectoryListing">true</entry>
+</properties>
