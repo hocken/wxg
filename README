@@ -73,6 +73,23 @@ Perform the following steps to run WXG:
 
 	java -jar wxg.jar
 	
+Access WXG from client-side
+==========================
+
+Open a new WebSocket and point it to ws://${YOUR_HOSTNAME}:${PORT}
+where ${YOUR_HOSTNAME} is the ip or the hostname of the interface  WXG is bound to
+and ${PORT} is the port specified in conf/server.xml. WXG waits until the opening stream tag
+arrives and then reads the "to" attribute. Three options are available to define the
+hostname of the XMPP server to which the stream should be forwared:
+1.) Pass the desired hostname and server in the WebSocket URL
+    Example: ws://localhost:8080/?xmpphost=jabber.com&xmppport=5222
+2.) Use the aliases db in conf/aliases.conf to rewrite the hostname set in the "to"
+    attribute of the opening stream tag
+3.) Use the hostname set in the "to" attribute of the opening stream tag
+The options are applied in the given order.
+A simple testbed is available in www/testbed.html.It can be accessed by pointing the browser
+to http://localhost:8080/testbed.html 
+
 References
 ==========
 [1] P. Saint-Andre. Extensible Messaging and Presence Protocol (XMPP): Core. RFC3920. Oct 2004. http://www.ietf.org/rfc/rfc3920.txt
