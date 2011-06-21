@@ -1,8 +1,8 @@
 WebSocket XMPP Gateway (WXG) - README
 =====================================
-WXG (pronounce as "Wixig") is a Java-implementation of a gateway enabling communication with native XMPP[1] servers over the WebSocket protocol[2], as specified in [3].
+WXG (pronounce as "Wixig") is a Java-implementation of a gateway enabling communication with native XMPP[1] servers over the WebSocket protocol[2] and API[3], as specified in [4].
 
-Until now, one of the common techniques in using XMPP in JS-powered Web applications was to make use of BOSH and XMPP over BOSH. However, with the advent of the WebSocket protocol[1] and API[4]. Currently, most XMPP servers are not equipped with connectors for receiving and delivering stanzas over the WebSocket protocol as specified in [3].
+Until now, one of the common techniques in using XMPP in JS-powered Web applications was to make use of BOSH[5] and XMPP over BOSH[6]. However, with the advent of the WebSocket protocol and API already widely available in modern Web browsers, the unstable and slow BOSH technique should be replaced. Currently, most XMPP servers are not equipped with connectors for receiving and delivering stanzas over the WebSocket protocol as specified in [4].
 
 The following scheme shows the basic functionality of WXG:
 
@@ -21,7 +21,7 @@ WXG is implemented in Java. In order to build and run WXG, an installed Java SDK
 Check-out and build WXG
 =======================
 
-To build WXG, perform the following steps:
+Perform the following steps to build WXG:
 
 1) check out a copy of the git repository from github
 
@@ -39,13 +39,14 @@ The result of the building process is a JAR file wxg.jar
 
 Configure WXG
 =============
+
 Perform the following steps to configure WXG:
 
-1)	change to the conf directory relative to the WXG root directory
+1) change to the conf directory relative to the WXG root directory
 
 	cd ${WXG_HOME}/conf
 
-2)	edit the configuration file "server.xml" to your needs
+2) edit the configuration file "server.xml" to your needs
 
 All configurable parameters are documented in the configuration file.
  
@@ -62,8 +63,9 @@ Perform the following steps to run WXG:
 	
 References
 ==========
-[1]	P. Saint-Andre. Extensible Messaging and Presence Protocol (XMPP): Core. RFC3920. Oct 2004. http://www.ietf.org/rfc/rfc3920.txt
+[1] P. Saint-Andre. Extensible Messaging and Presence Protocol (XMPP): Core. RFC3920. Oct 2004. http://www.ietf.org/rfc/rfc3920.txt
 [2] I. Fette.  The WebSocket protocol. HyBi Working Group Internet Draft. Jun 2011. http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-09
-[3] J. Moffit, E. Cestari. An XMPP Sub-protocol for WebSocket. HyBi Working Group Internet Draft. Dec 2010. http://tools.ietf.org/html/draft-moffitt-xmpp-over-websocket-00
-[4] I. Hickson. The WebSocket API. W3C Editor's draft. Jun 2011. http://dev.w3.org/html5/websockets/
-
+[3] I. Hickson. The WebSocket API. W3C Editor's draft. Jun 2011. http://dev.w3.org/html5/websockets/
+[4] J. Moffit, E. Cestari. An XMPP Sub-protocol for WebSocket. HyBi Working Group Internet Draft. Dec 2010. http://tools.ietf.org/html/draft-moffitt-xmpp-over-websocket-00
+[5] I. Paterson, D. Smith, P. Saint-Andre, J. Moffitt. XEP-0124: Bidirectional-streams Over Synchronous HTTP (BOSH). XSF Draft Standard. Jul 2010. 
+[6] I. Paterson, P. Saint-Andre. XEP-0206: XMPP Over BOSH. XSF Draft Standard. Jul 2010. http://xmpp.org/extensions/xep-0206.html
