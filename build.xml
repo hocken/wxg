@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="WebSocket XMPP Gateway" basedir="." default="pack">
+<project name="WebSocket XMPP Gateway (WXG)" basedir="." default="pack">
 	<description>
-		This build file compiles and packs the WebSocket XMPP Gateway developed at the 
-		chair of Information Systems at RWTH Aachen University, Germany.
+		This build file compiles and packs the WebSocket XMPP Gateway (WXG) developed at the 
+		Chair of Computer Science 5 (Information Systems) at RWTH Aachen University, Germany.
 	</description>
 	
 	<property name="src" location="java" />
@@ -33,10 +33,10 @@
 	</target>
 	
 	<target name="pack" depends="compile" description="creates an executable jar file">
-		<manifestclasspath property="jar.classpath" jarfile="wsxmppgateway.jar">
+		<manifestclasspath property="jar.classpath" jarfile="wxg.jar">
 			<classpath refid="classpath"/>
 		</manifestclasspath> 
-		<jar jarfile="wsxmppgateway.jar">
+		<jar jarfile="wxg.jar">
 			<manifest>
 				<attribute name="Main-Class" value="de.rwth_aachen.dbis.wsxmppgateway.WebSocketXmppGateway" />
 				<attribute name="Class-Path" value="${jar.classpath}" />
@@ -55,12 +55,12 @@
                  use="true"
                  link="http://download.oracle.com/javase/6/docs/api/"
                  classpathref="classpath"
-                 windowtitle="WebSocket XMPP Gateway">
+                 windowtitle="WebSocket XMPP Gateway (WXG)">
 			<packageset dir="${src}">
 				<include name="de/rwth_aachen/dbis/wsxmppgateway/**" />
 			</packageset>
 			<bottom>
-				<![CDATA[<p class="bottom">Copyright &#169; 2011 Chair of Information Systems at RWTH Aachen University, Germany</p>]]>
+				<![CDATA[<p class="bottom">Copyright &#169; 2011 Chair of Computer Science 5 (Information Systems) at RWTH Aachen University, Germany</p>]]>
 			</bottom>
 		</javadoc>
 	</target>
