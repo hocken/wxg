@@ -1,5 +1,6 @@
 /*
- * Copyright 2011 Christian Hocken, Dominik Renzel, Chair of Information Systems at RWTH Aachen University, Germany
+ * Copyright 2011 Christian Hocken, Dominik Renzel,
+ * Chair of Computer Science 5 (Information Systems) at RWTH Aachen University, Germany.*
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
