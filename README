@@ -11,7 +11,7 @@ connectors for receiving and delivering stanzas over the WebSocket protocol as s
 
 The following scheme shows the basic functionality of WXG:
 
-Client	<---->	ws(xmpp) <----> WXG <----> xmpp <----> XMPP Server
+Client  <---->  ws(xmpp)  <---->  WXG  <---->  xmpp  <---->  XMPP Server
 
 As such, WXG realizes two basic use cases:
 
@@ -81,7 +81,7 @@ or the hostname of the interface WXG is bound to and ${WXG_PORT} is the port spe
 WXG waits until the opening stream tag arrives and then reads the "to" attribute. Three options are available
 to define the hostname of the XMPP server to which the stream should be forwared:
 
-1) Pass the desired hostname and server in the WebSocket URL
+1) Pass the desired hostname and port in the WebSocket URL
    Example: ws://localhost:8080/?xmpphost=jabber.com&xmppport=5222
 
 2) Use the aliases db in conf/aliases.conf to rewrite the hostname set in the "to"
