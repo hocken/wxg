@@ -226,7 +226,7 @@ public class WsXMPPConnectionHandler implements WebSocket, WebSocket.OnFrame, We
 				else {
 					//try to parse data
 					receivedElement = new Element(data);
-					logger.info(request.getRemoteHost() + " - forwarding stanza:\n" + receivedElement.toString(false));
+					logger.debug(request.getRemoteHost() + " - forwarding stanza:\n" + receivedElement.toString(false));
 					wsProxy.forwardStanzaToServer(receivedElement);
 				break;
 				}
