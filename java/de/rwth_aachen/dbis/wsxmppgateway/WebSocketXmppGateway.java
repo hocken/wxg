@@ -44,11 +44,8 @@ import de.rwth_aachen.dbis.wsxmppgateway.connection.WsXMPPConnectionHandler;
 /**
  * This class is the main class of the WebSocket XMPP gateway. It starts a Jetty HTTP servlet server with connectors and handlers.
  * @author Christian Hocken
- * @version $Revision 0.1 $, $Date: 2011/06/21 08:54:16 $
  */
 public class WebSocketXmppGateway extends Server {
-	
-	public static final String version = "$Revision 0.1 $, $Date: 2011/06/21 08:54:16 $";
 	
 	//******************** defaults  ********************//
 	private static final String		DEFAULT_CONFIG_FILE = "conf/server.xml";
@@ -139,7 +136,7 @@ public class WebSocketXmppGateway extends Server {
 	
 	//******************** static methods ********************//
 	public static void main(String...args) {
-		logger.info("Starting WebSocket XMPP gateway - " + version);
+		logger.info("Starting WebSocket XMPP gateway");
 		//load properties from location specified in configFile
 		loadProperties();
 		//load aliases in cache

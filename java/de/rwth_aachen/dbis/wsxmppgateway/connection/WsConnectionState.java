@@ -19,7 +19,6 @@ package de.rwth_aachen.dbis.wsxmppgateway.connection;
 /**
  * Constants that represent the life cycle of an XMPP connection 
  * @author Christian Hocken (hocken@dbis.rwth-aachen.de)
- * @version $Revision 0.1 $, $Date: 2011/06/20 16:06:15 $
  */
 public class WsConnectionState {
 	

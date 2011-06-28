@@ -46,9 +46,7 @@ import de.rwth_aachen.dbis.wsxmppgateway.exception.StreamErrorException;
 
 /**
  * Connection between client and gateway that has been established via the WebSockets protocol
- * 
  * @author Christian Hocken (hocken@dbis.rwth-aachen.de)
- * @version $Revision 0.1 $, $Date: 2011/06/21 08:54:16 $
  */
 public class WsXMPPConnectionHandler implements WebSocket, WebSocket.OnFrame, WebSocket.OnTextMessage, WebSocket.OnControl {
 	

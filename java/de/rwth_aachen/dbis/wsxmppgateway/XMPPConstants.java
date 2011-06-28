@@ -19,7 +19,6 @@ package de.rwth_aachen.dbis.wsxmppgateway;
 /**
  * Constants defined in the XMPP Core and IM RFCs
  * @author Holger Janssen (janssen@dbis.rwth-aachen.de) & Christian Hocken (hocken@dbis.rwth-aachen.de)
-  * @version $Revision 0.1 $, $Date: 2011/06/20 16:06:15 $
  */
 public class XMPPConstants {
 	

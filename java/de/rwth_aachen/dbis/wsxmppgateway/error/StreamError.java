@@ -22,7 +22,6 @@ import de.rwth_aachen.dbis.wsxmppgateway.XMPPConstants;
  * StreamError is a wrapper class for an XMPP stream error
  * @see XMPPConstants
  * @author Patrick Schlebusch (schlebu@dbis.rwth-aachen.de) & Christian Hocken (hocken@dbis.rwth-aachen.de)
- * @version $Revision 0.1 $, $Date: 2011/06/21 08:54:16 $
  */
 public class StreamError {
 	private int code;
