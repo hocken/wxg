@@ -77,7 +77,8 @@ Access WXG from client-side
 ==========================
 
 Open a new WebSocket and point it to ws://${WXG_HOSTNAME}:${WXG_PORT} where ${WXG_HOSTNAME} is the IP address
-or the hostname of the interface WXG is bound to and ${WXG_PORT} is the port specified in conf/server.xml. 
+or the hostname of the interface WXG is bound to and ${WXG_PORT} is the port specified in conf/server.xml.
+Keep in mind that according to [4] "xmpp" must be registered as subprotocol in the WebSocket object.
 WXG waits until the opening stream tag arrives and then reads the "to" attribute. Three options are available
 to define the hostname of the XMPP server to which the stream should be forwared:
 
