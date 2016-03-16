@@ -461,10 +461,10 @@ public class WsXMPPConnectionHandler implements WebSocket, WebSocket.OnFrame, We
 			String xml = "";
 			if (sendXmlHeader)
 				xml += "<?xml version=\"1.0\"?>";
-			xml += "<stream:stream ";
+			xml += "<stream:stream";
 			for (Enumeration<String> e = root.getAttributeNames(); e.hasMoreElements(); ) {
 				String attribute = e.nextElement();
-				xml += attribute + "=\"" + root.getAttribute(attribute) + "\"";
+				xml += " " + attribute + "=\"" + root.getAttribute(attribute) + "\"";
 			}
 			xml +=">";
 			sendMessage(xml);
